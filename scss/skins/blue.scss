@@ -1,0 +1,305 @@
+@import "../bourbon/bourbon";
+
+//Theme skin
+$color: #4183D7;
+
+$text_color: #555;
+$text_color_2: #888;
+$main_color: #222;
+
+$bg_light: #FAFAFA;
+$bg_medium: #F2F1EF;
+$bg_hard: #2C3E50;
+
+
+$logo_color: $color;
+
+$btn_menu_bgcolor: $main_color;
+$btn_menu_color: $color;
+
+$menu_color: $color;
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// расстояние между символами
+@mixin kerning($kerning) {
+	letter-spacing: $kerning + px;
+}
+
+body{
+	color: $text_color;
+	@include kerning(1);
+}
+
+a {
+	color: $color;
+	@include transition(all 0.5s ease);
+
+	&:hover {
+		color: $color + 30;
+	}
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ЛОГОТИП
+.logo_container {
+	background-color: $bg_light;
+	svg {
+		path {
+			fill: $color;
+			@include transition(all 0.6s ease);
+
+			&:hover {
+				background: $color - 15;
+			}
+		}
+	}
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// КНОПКА МЕНЮ
+.menu_toggle {
+	background: $btn_menu_color;
+	@include transition(all 0.6s ease);
+
+	&:hover {
+		background: $btn_menu_color - 20;
+	}
+	.sandwich {
+		.sw_top,
+		.sw_middle,
+		.sw_bottom { background: $bg_light; }
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// МЕНЮ
+.menu_container {
+	background-color: rgba(0,0,0,.7);
+	li {
+		a {
+			@include kerning(5);
+			color: $bg_light;
+
+			&:hover { color: $menu_color; }
+
+			span {
+				&:hover { background: rgba(255,255,255,.1); }
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ГЛАВНОЕ НАЗВАНИЕ
+.home_container {
+	.home_title {
+		h1 {
+			color: $menu_color;
+			background: rgba(0,0,0,0.1);
+		}
+		p {
+			@include kerning(5);
+			color: $bg_light;
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ОБЩЕЕ ДЛЯ СЕКЦИЙ
+.section {
+	background-color: $bg_medium;
+
+	.section_title {
+		.title {
+			color: $main_color;
+			@include kerning(3);
+		}
+		.title_description {
+			color: $main_color;
+			@include kerning(3);
+
+			&::after {
+				background-color: $color;
+			}
+		}
+	}
+
+	h3 {
+		@include kerning(2);
+		color: $main_color + 70;
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ОБО МНЕ
+.section_about {
+	.section_content {
+		p:nth-child(even) {
+			color: $color - 30;
+		}
+		h4 {
+			color: $main_color + 50;
+		}
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// РЕЗЮМЕ
+.section_resume {
+	background-color: $bg_light;
+
+	.section_content {
+
+		.resume_item {
+			.year {
+				background-color: $color;
+				color: $bg_medium;
+			}
+		}
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ПОРТФОЛИО
+.section_portfolio {
+	background-color: $main_color;
+
+	.section_title {
+		.title 				{ color: $bg_light; }
+		.title_description	{ color: $text_color_2; }
+	}
+
+	ul {
+		li {
+			color: $text_color_2;
+			@include kerning(2);
+
+			&.active {
+				color: $bg_medium;
+				border-bottom: 1px solid $color;
+			}
+
+			&:hover {
+				color: $text_color_2 + 30;
+			}
+		}
+	}
+}
+
+.portfolio_item {
+	.content {
+		h4 {
+			@include kerning(4);
+			color: $bg_light;
+		}
+
+		p { color: $bg_medium - 30; }
+
+		a {
+			color: $color;
+			border: 1px solid $color;
+
+			&:hover {
+				color: $color + 30;
+				border: 1px solid $color + 30;
+			}
+		}
+	}
+}
+
+.mfp-content {
+	.description {
+		background-color: $bg_medium;
+
+		p { color: $text_color_2; }
+		
+		.mfp-close {
+			color: $color;
+		}
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// КОНТАКТЫ
+.section_contact {
+	.box {
+		.icon {
+			color: $color;
+		}
+	}
+
+	.form {
+		input, textarea {
+			@include kerning(1);
+			border: 1px solid $text_color_2 + 90;
+
+			&:focus {
+				border: 1px solid $color;
+
+				&::-webkit-input-placeholder {
+				color: $color;
+				}
+
+				&::-moz-placeholder {
+					color: $color;
+				}
+			}
+			&::-webkit-input-placeholder {
+				color: $text_color_2 + 70;
+			}
+				
+			&::-moz-placeholder {
+				color: $text_color_2 + 70;
+			}
+
+			
+		}
+		.button {
+			@include kerning(2);
+			color: $bg_medium;
+			background-color: $color;
+
+			&:hover {
+				background-color: $color + 10;
+			}
+		}
+		.text-danger {
+			color: $color;
+		}
+	}
+
+	.form-group {
+		p {
+			span {
+				color: $color;
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ФУТЕР
+.foot {
+	// @include kerning(3);
+	background-color: $main_color;
+	color: $text_color_2;
+}

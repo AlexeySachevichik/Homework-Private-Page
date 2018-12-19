@@ -1,0 +1,22 @@
+// Укажем в переменную путь к шрифтам относительно созданного впоследствии файла *.css
+$src: '../fonts/raleway/';
+
+// Подключаем необходимые шрифты
+@include font-face("Raleway", $src+"ralewaythin/ralewaythin", 100, normal, $file-formats: eot ttf woff woff2);
+@include font-face("Raleway", $src+"ralewaythinitalic/ralewaythinitalic", 100, italic, $file-formats: ttf woff woff2);
+@include font-face("Raleway", $src+"ralewayextralight/ralewayextralight", 200, normal, $file-formats: eot ttf woff woff2);
+@include font-face("Raleway", $src+"ralewayextralightitalic/ralewayextralightitalic", 200, italic, $file-formats: ttf woff woff2);
+@include font-face("Raleway", $src+"ralewaylight/ralewaylight", 300, normal, $file-formats: eot ttf woff woff2);
+@include font-face("Raleway", $src+"ralewaylightitalic/ralewaylightitalic", 300, italic, $file-formats: ttf woff woff2);
+@include font-face("Raleway", $src+"ralewayregular/ralewayregular", 400, normal, $file-formats: eot ttf woff woff2);
+@include font-face("Raleway", $src+"ralewayitalic/ralewayitalic", 400, italic, $file-formats: ttf woff woff2);
+@include font-face("Raleway", $src+"ralewaymedium/ralewaymedium", 500, normal, $file-formats: eot ttf woff woff2);
+@include font-face("Raleway", $src+"ralewaymediumitalic/ralewaymediumitalic", 500, italic, $file-formats: ttf woff woff2);
+@include font-face("Raleway", $src+"ralewaysemibold/ralewaysemibold", 600, normal, $file-formats: eot ttf woff woff2);
+@include font-face("Raleway", $src+"ralewaysemibolditalic/ralewaysemibolditalic", 600, italic, $file-formats: ttf woff woff2);
+@include font-face("Raleway", $src+"ralewaybold/ralewaybold", 700, normal, $file-formats: eot ttf woff woff2);
+@include font-face("Raleway", $src+"ralewaybolditalic/ralewaybolditalic", 700, italic, $file-formats: ttf woff woff2);
+@include font-face("Raleway", $src+"ralewayextrabold/ralewayextrabold", 800, normal, $file-formats: eot ttf woff woff2);
+@include font-face("Raleway", $src+"ralewayextrabolditalic/ralewayextrabolditalic", 800, italic, $file-formats: ttf woff woff2);
+@include font-face("Raleway", $src+"ralewayblack/ralewayblack", 900, normal, $file-formats: eot ttf woff woff2);
+@include font-face("Raleway", $src+"ralewayblackitalic/ralewayblackitalic", 900, italic, $file-formats: ttf woff woff2);

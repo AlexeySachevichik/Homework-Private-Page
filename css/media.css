@@ -1,0 +1,115 @@
+@media only screen and (max-width: 767px) {
+  .section {
+    padding: 30px 0;
+  }
+  .section .section_title {
+    margin-bottom: 20px;
+  }
+  .section .section_title .title {
+    font-size: 1.5em;
+  }
+  .section .section_title .title_description {
+    font-size: 1em;
+  }
+  .section .section_title .title_description::after {
+    margin: 5px auto;
+    width: 150px;
+  }
+  .section h3 {
+    margin-top: 30px;
+  }
+
+  .section_resume .section_content .resume_icon {
+    text-align: center;
+  }
+  .section_resume .section_content .resume_item {
+    margin: 20px 0;
+  }
+  .section_resume .section_content .resume_item .title {
+    margin: 5px 0;
+  }
+  .section_resume .section_content .left {
+    text-align: left;
+    border-right: none;
+  }
+  .section_resume .section_content .left h3 {
+    text-align: center;
+  }
+  .section_resume .section_content .right h3 {
+    text-align: center;
+  }
+
+  .portfolio_table_controls ul li {
+    font-size: 0.8em;
+  }
+
+  .portfolio_item {
+    width: 100%;
+  }
+  .portfolio_item .content h4 {
+    font-size: 1.1em;
+  }
+  .portfolio_item .content p {
+    font-size: 1em;
+  }
+  .portfolio_item .content a {
+    font-size: 1.1em;
+  }
+
+  .section_contact .box {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .section_contact .box .icon {
+    font-size: 30px;
+  }
+  .section_contact .box h3 {
+    text-align: center;
+    margin: 0;
+  }
+  .section_contact .form .button_wrapper {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .foot {
+    padding: 30px 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .logo_container svg {
+    height: 30px;
+  }
+
+  .home_container .home_title h1 {
+    padding: 10px;
+    font-size: 2.5em;
+  }
+}
+/* 
+////////////////////  Mobile First Method  ////////////////////
+
+// Custom, iPhone Retina
+@media only screen and (min-width : 320px) {
+
+}
+
+// Extra Small Devices, Phones
+@media only screen and (min-width : 480px) {
+
+}
+
+// Small Devices, Tablets
+@media only screen and (min-width : 768px) {
+
+}
+
+// Medium Devices, Desktops
+@media only screen and (min-width : 992px) {
+
+}
+
+// Large Devices, Wide Screens
+@media only screen and (min-width : 1200px) {
+
+} */
